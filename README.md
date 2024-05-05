@@ -77,6 +77,7 @@ Working with:
 69. [How to use redux dev-tool in the browser?](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25600378#questions)
 70. [React Router website](https://reactrouter.com/en/main)
 71. `npm install react-router-dom` Use this command to install react-router-dom and work with react router.
+72. [A different approach of defining routes](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/35733844#questions)
 
 [Eslint configuration - Best linting configuration is to use "format on save" and don't use "formatting option of ES Lint"](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/8231814#questions/20789494)
 
