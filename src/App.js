@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/Home';
 import ProductsPage from './pages/Products';
+import ErrorPage from './pages/Error.jsx';
 import Root from './pages/Root';
 
 function App () {
@@ -9,6 +10,7 @@ function App () {
     {
       path: '/',
       element: <Root />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: '/',
