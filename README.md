@@ -77,6 +77,60 @@ Working with:
 69. [How to use redux dev-tool in the browser?](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25600378#questions)
 70. [React Router website](https://reactrouter.com/en/main)
 71. `npm install react-router-dom` Use this command to install react-router-dom and work with react router.
+72. [A different approach of defining routes](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/35733844#questions)
+73. The paths in the children below start with '/'. This means these paths are **absolute paths** and if the domain is `http://example.com` then `{ path: '/products', element: <ProductsPage /> }` will take the control to `http://example.com/products`.
+
+```Javascript
+const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: '/',
+          element: <HomePage />
+        },
+        {
+          path: '/products',
+          element: <ProductsPage />
+        },
+        {
+          path: '/products/:productId',
+          element: <ProductDetailPage />
+        }
+      ]
+    }
+  ]);
+```
+
+74. The paths in the children below don't start with '/'. This means these paths are **relative paths** and if the domain is `http://example.com` then `{ path: 'products', element: <ProductsPage /> }` will take the control to `http://example.com/root/products`.
+
+```Javascript
+const router = createBrowserRouter([
+    {
+      path: '/root',
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: '',
+          element: <HomePage />
+        },
+        {
+          path: 'products',
+          element: <ProductsPage />
+        },
+        {
+          path: 'products/:productId',
+          element: <ProductDetailPage />
+        }
+      ]
+    }
+  ]);
+```
+
+75. `<Link to=".." relative='path'>Back</Link>` 'relative' property in `<Link>` works only for relative url in `to` attribute. It has 2 probable values `path` or `route`.
 
 [Eslint configuration - Best linting configuration is to use "format on save" and don't use "formatting option of ES Lint"](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/8231814#questions/20789494)
 
