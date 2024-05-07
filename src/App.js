@@ -14,7 +14,8 @@ function App () {
       errorElement: <ErrorPage />,
       children: [
         {
-          path: '',
+          // path: '', Either this
+          index: true, // or this
           element: <HomePage />
         },
         {
